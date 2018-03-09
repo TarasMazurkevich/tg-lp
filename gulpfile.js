@@ -22,6 +22,7 @@ var path = {
         js: './build/js',
         php: './build/php',
         css: './build/css',
+        media: './build/media',
         img: './build/img',
         fonts: './build/fonts'
     },
@@ -30,6 +31,7 @@ var path = {
         js: './source/js/*.js',
         php: './source/php/form.php',
         style: './source/styles/main.sass',
+        media: './source/media/**/*.*',
         img: './source/img/**/*.*', 
         fonts: './source/fonts/**/*.*'
     },
@@ -38,6 +40,7 @@ var path = {
         js: './source/js/**/*.js',
         php: './source/php/**/*.php',
         style: './source/styles/**/*.sass',
+        media: './source/media/**/*.*',
         img: './source/img/**/*.*',
         fonts: './source/fonts/**/*.*'
     },
@@ -74,6 +77,14 @@ gulp.task('style:build', function () {
         .pipe(prefixer({ grid: true }))
         .pipe(cssmin())
         .pipe(gulp.dest(path.build.css))
+        .pipe(browserSync.reload({stream: true}));
+});
+
+
+/* ------------ Image build ------------- */
+gulp.task('media:build', function(){
+    return gulp.src(path.src.media)
+        .pipe(gulp.dest(path.build.media))
         .pipe(browserSync.reload({stream: true}));
 });
 
@@ -120,12 +131,13 @@ gulp.task('watch', function(){
     gulp.watch(path.watch.style, gulp.series('style:build'));
     gulp.watch(path.watch.template, gulp.series('html:build'));
     gulp.watch(path.watch.js, gulp.series('js:build'));
+    gulp.watch(path.watch.media, gulp.series('media:build'));
     gulp.watch(path.watch.img, gulp.series('image:build'));
     gulp.watch(path.watch.fonts, gulp.series('fonts:build'));
 });
 
 gulp.task('default', gulp.series('clean', 
-        gulp.parallel('style:build', 'html:build', 'js:build', 'image:build', 'fonts:build'),
+        gulp.parallel('style:build', 'html:build', 'js:build', 'media:build', 'image:build', 'fonts:build'),
         gulp.parallel('watch', 'browser-sync')
     )
 );

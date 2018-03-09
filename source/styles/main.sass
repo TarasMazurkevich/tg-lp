@@ -1,0 +1,211 @@
+// import var
+@import var
+
+// Defoult styles
+html, body
+	font-family: Roboto
+	margin: 0
+	padding: 0
+
+// wrapper ----------
+.wrapper
+	@media screen and (min-width: 768px)
+		height: 100vh
+
+// header ----------
+
+// menu -----
+.menu
+	&__block
+		display: flex
+		align-items: center
+		margin: 10px 0
+		padding: 0 2%
+		width: 100%
+
+	&_logo
+		display: flex
+		justify-content: center
+		width: 123px
+		height: 14px
+
+		@media screen and (min-width: 768px)
+			justify-content: flex-start
+
+	&_burger
+		display: flex
+		justify-content: flex-end
+		font-size: 23px
+		text-align: center
+		color: $blue
+
+// menu-active -----
+.menu-active
+	display: none
+	@media screen and (min-width: 768px)
+		background-color: #2e3438
+		height: 100vh
+
+	&-bg
+		display: none
+		@media screen and (min-width: 768px)
+			display: none
+			position: absolute
+			top: 0
+			left: 0
+			width: 50%
+			height: 100%
+
+	&__block
+		@extend .menu__block
+
+	&_burger
+		@extend .menu_burger
+
+	&_title
+		+editText(none, 18px, 500, uppercase)
+		text-align: center
+
+	&__list
+		background-color: #2e3438
+		width: 100%
+		box-shadow: 0 15px 70px -10px $black
+
+		@media screen and (min-width: 768px)
+			display: flex
+			align-items: center
+			background-color: transparent
+			height: 90%
+			box-shadow: none
+
+		ul
+			text-align: center
+			list-style-type: none
+			a
+				+editText($white, 18px, 500, uppercase)
+				text-decoration: none	
+
+	&_hr
+		border: none
+		width: 38px
+		height: 2px
+		color: $blue
+		background-color: $blue
+		text-align: center
+
+// article ----------
+
+.article__block
+	@media screen and (min-width: 768px)
+		margin-top: 70px
+	@media screen and (min-width: 1200px)
+		margin-top: 50px
+
+// caption
+.article__caption
+	@media screen and (min-width: 768px)
+		display: flex
+		flex-direction: column
+		justify-content: center
+
+	&_title
+		+editText($grey, 32px, 700, none)
+		text-align: center
+
+		@media screen and (min-width: 768px)
+			text-align: start
+		@media screen and (min-width: 1200px)
+			width: 80%
+
+	&_text
+		+editText(#6d6963, 12px, 400, none)
+		text-align: center
+
+		@media screen and (min-width: 768px)
+			text-align: start
+		@media screen and (min-width: 1200px)
+			width: 80%
+
+		label
+			text-transform: capitalize
+
+// media
+.article__media
+	display: flex
+	justify-content: center
+	margin-top: 20px
+	height: 200px
+
+	@media screen and (min-width: 1200px)
+		height: 300px
+
+	img
+		align-self: center
+		position: absolute
+		width: 320px
+		height: 200px
+
+		@media screen and (min-width: 1200px)
+			width: 460px
+			height: 300px
+
+	.macbook
+		z-index: 99
+		display: flex
+		justify-content: center
+		align-items: center
+		background-image: url('../img/img-parallax-1.png')
+		background-size: contain
+		background-repeat: no-repeat
+		background-position: center
+		width: 100%
+
+		.video
+			margin: 18px 11px 0 0
+			width: 207px
+			height: 139px
+
+			@media screen and (min-width: 1200px)
+				width: 307px
+				height: 239px
+
+		video
+			width: 100%
+			height: 100%
+
+// article-down
+.down-block
+	margin-top: 30px
+	text-align: center
+
+	&_text
+		+editText($grey, 14px, 500, uppercase)
+
+	path
+		width: 18px
+		height: 12px
+
+// screen-two ----------
+.screen-two
+	&__block
+		display: flex
+		align-items: center
+		height: 50vh
+
+	&__block:first-of-type
+		+bg('../img/img-button-mobile-1.jpg', 100%, no-repeat)
+
+	&__block:last-of-type
+		+bg('../img/img-button-mobile-2.jpg', 100%, no-repeat)
+
+	&__content
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+
+	&_title
+		+editText($white, 24px, 700, capitalize)
+
+	&_text
+		+editText($white, 15px, 400, none)

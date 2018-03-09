@@ -1,8 +1,8 @@
 // variable
-$white = #fff
-$black = #000
-$grey = #202020
-$blue = #7AB8FE
+$white: #fff
+$black: #000
+$grey: #202020
+$blue: #7AB8FE
 
 // class
 .clear
@@ -12,4 +12,18 @@ $blue = #7AB8FE
 .flu:first-letter
 	text-transform: uppercase
 
+.empty
+	@media screen and (min-width: 768px)
+		display: none
+
 // mixins
+=editText($a, $b, $c, $d)
+	color: $a
+	font-size: $b
+	font-weight: $c
+	text-transform: $d
+
+=bg($a, $b, $c)
+	background-image: url($a)
+	background-size: $b
+	background-repeat: $c

@@ -5,8 +5,9 @@
 	<title>tg-lp</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
 	<link rel="stylesheet" href="css/main.css">
+
 
 	<!--[if lt IE 9]>
 		script(src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js")
@@ -15,11 +16,131 @@
 	<![endif]-->
 </head>
 <body>
+	<div class="wrapper">
+		<section>
+			<header>
+				<div class="menu">
+					<div class="container">
+						<div class="row">
+							<div class="menu__block">
+								<div class="col empty"></div>
+								<div class="col-5 menu_logo">
+									<img src="img/logo.png" alt="logo">
+								</div>
+								<div class="col menu_burger">
+									<span class="fas fa-bars fa-sm"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="menu-active">
+					<img class="menu-active-bg" src="img/img-menu-bg.jpg" alt="menu-bg">
+					<div class="container">
+						<div class="row">
+							<div class="menu-active__block">
+								<div class="col menu-active_logo empty">
+									<img src="img/menu-active-logo.png" alt="menu-active-logo">
+								</div>
+								<div class="col-5 menu-active_title empty">меню</div>
+								<div class="col menu-active_burger">
+									<span class="fas fa-times fa-sm"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<nav class="menu-active__list">
+						<div class="container">
+							<div class="row">
+								<ul class="col-12 offset-md-6 col-md-6">
+									<li>
+										<a href="">главная</a>
+									</li>
+									<hr class="menu-active_hr">
+									<li>
+										<a href="">рекламодатель</a>
+									</li>
+									<hr class="menu-active_hr">
+									<li>
+										<a href="">партнер</a>
+									</li>
+									<hr class="menu-active_hr">
+									<li>
+										<a href="">о нас</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</nav>
+				</div>
+			</header>
+			<article>
+				<div class="article__block">
+					<div class="container">
+						<div class="row">
+							<div class="col-12 col-md-6 article__caption">
+								<h1 class="flu article__caption_title">тизерная реклама с <label>максимальной</label> конверсией</h1>
+								<p class="article__caption_text"><label>teaser.group -</label> это продвинутый срвис по созданию результативной тизерной рекламы на проведенных площадках.</p>
+							</div>
+							<div class="col-12 col-md-6 article__media">
+								<img src="img/img-parallax-2.png" alt="img-parallax-2">
+								<img src="img/img-parallax-3.png" alt="img-parallax-3">
+								<img src="img/img-parallax-4.png" alt="img-parallax-4">
+								<div class="macbook">
+									<div class="video">
+										<video autoplay loop>
+											<source src="media/video-sample.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+											<source src="media/video-sample.ogv" type='video/ogg; codecs="theora, vorbis"'>
+											<source src="media/video-sample.webm" type='video/webm; codecs="vp8, vorbis"'>
+										</video>
+									</div>
+								</div>
+							</div>
+							<div class="col-12 down-block empty">
+								<div class="down-block_text">потяните вверх</div>
+								<a class="down-block_btn">
+									<svg width="70" height="50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+										<path d="M28.7 41l4.3-4.2 17 17.7 17-17.7 4.3 4.2L50 63.2z"/>
+									</svg>
+								</a>
+							</div>
+						</div>	
+					</div>
+				</div>
+			</article>
+		</section>
+		<section class="screen-two">
+				<div class="screen-two__block">
+					<div class="container">
+						<div class="row">
+							<div class="col-12 screen-two__content">
+								<h2 class="screen-two_title">я - партнер</h2>
+								<p class="flu screen-two_text">хочу повысить доход от сайта</p>
+								<a href="" class="screen-two_btn">выбрать</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="screen-two__block">
+					<div class="container">
+						<div class="row">
+							<div class="col-12 screen-two__content">
+								<h2 class="screen-two_title">я - рекламодатель</h2>
+								<p class="flu screen-two_text">хочу расширить целевую аудиторию</p>
+								<a href="" class="screen-two_btn">выбрать</a>
+							</div>
+						</div>
+					</div>
+				</div>
+		</section>
+	</div>
 	
-
+	
+	
 	
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<script src="js/fontawesome-all.min.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>
