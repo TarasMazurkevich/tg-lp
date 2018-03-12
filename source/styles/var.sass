@@ -1,14 +1,10 @@
-// variable
+// variable --------------------
 $white: #fff
 $black: #000
 $grey: #202020
 $blue: #7AB8FE
 
-// class
-.clear
-	margin: 0
-	padding: 0
-
+// class --------------------
 .flu:first-letter
 	text-transform: uppercase
 
@@ -16,7 +12,7 @@ $blue: #7AB8FE
 	@media screen and (min-width: 768px)
 		display: none
 
-// mixins
+// mixins --------------------
 =editText($a, $b, $c, $d)
 	color: $a
 	font-size: $b
@@ -27,3 +23,145 @@ $blue: #7AB8FE
 	background-image: url($a)
 	background-size: $b
 	background-repeat: $c
+
+=animate($a, $b, $c)
+	animation-name: $a
+	animation-duration: $b
+	animation-delay: $c
+	anmation-iteration-count: 1
+	animation-fill-mode: forwards
+
+// animations --------------------
+// 1) menu
+// 2) macbook
+// 3) video
+// 4) titleLine
+// 5) parallax
+// 6) downBtn
+// 7) menu-bg
+// 8) capContentClick
+// 9) logo
+// 10) active-menu-li
+
+
+// 1) menu
+@keyframes slideMenu
+	0%
+		transform: translate(0, -100px)
+	100%
+		transform: translate(0, 0)
+
+@keyframes menuClick
+	0%
+		transform: translate(0, 0)
+		opacity: 1
+	100%
+		transform: translate(0, 100px)
+		opacity: 0
+
+// 2) macbook
+@keyframes zoomMacbook
+	0%
+		width: 50%
+		opacity: 0
+	100%
+		width: 100%
+		opacity: 1
+
+@keyframes macbookClick
+	0%
+		transform: translate(0, 0)
+		opacity: 1
+	100%
+		transform: translate(-300px, 0)
+		opacity: 0
+
+// 3) video
+@keyframes video
+	0%
+		opacity: 0
+	100%
+		opacity: 1
+
+// 4) titleLine
+
+// 5) parallax2,3,4
+@keyframes zoomParallax
+	0%
+		transform: scale(-0.5, -0.5)
+		opacity: 0
+	100%
+		transform: scale(1, 1)
+		opacity: 1
+
+@keyframes parallaxClick
+	0%
+		transform: translate(0, 0)	
+	100%
+		transform: translate(500px, -500px) rotate(70deg)
+		opacity: 0
+
+@keyframes parallaxClick2
+	0%
+		transform: translate(0, 0)	
+	100%
+		transform: translate(-500px, -500px) rotate(-70deg)
+		opacity: 0
+
+@keyframes parallaxClick3
+	0%
+		transform: translate(0, 0)	
+	100%
+		transform: translate(-200px, -500px) rotate(30deg)
+		opacity: 0
+
+// 6) downBtn1, 2
+@keyframes slideDownBtn
+	0%
+		transform: translate(0, 20px)	
+	100%
+		transform: translate(0, 0)
+		opacity: 1
+
+@keyframes slideDownBtnRevers
+	0%
+		transform: translate(0, 0)	
+	100%
+		transform: translate(0, 20px)
+		opacity: 0
+
+// 7) menu-bg
+@keyframes menuBg
+	0%
+		transform: translate(-1000px, 0)
+		opacity: 0
+	100%
+		transform: translate(0, 0)
+		opacity: 1
+
+// 8) capContentClick
+@keyframes capContentClick
+	0%
+		opacity: 1
+	100%
+		opacity: 0
+
+// 9) logo
+@keyframes logoClick
+	0%
+		top: 0
+		left: 0
+	100%
+		z-index: 999
+		top: 35%
+		left: 25%
+		opacity: 1
+
+// 10) active-menu-li
+@keyframes activeLi
+	0%
+		transform: translate(200px, 0)
+		opacity: 0
+	100%
+		transform: translate(0, 0)
+		opacity: 1
